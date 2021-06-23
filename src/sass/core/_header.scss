@@ -1,0 +1,84 @@
+.container {
+    
+
+    header {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 100%;
+        height: 80px;
+        margin-bottom: 120px;
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 45px;
+            left: 0;
+            height: 1px;
+            width: 100%;
+            background: $color_light_grey;
+        }
+        .header-title {
+            position: relative;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+            text-align: left;
+            padding-right: 24px;
+            height: 100%;
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                height: 100%;
+                width: 1px;
+                background: $color_light_grey;
+            }
+            h2 {
+                font: $font_base_poppins;
+                font-size: $font_size_h2;
+                color: $color_grey;
+                font-weight: 500;
+            }
+            h3 {
+                font: $font_base_poppins;
+                font-size: $font_size_h3;
+                color: $color_light_grey;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+        }
+        #menu-static {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+            width: 45%;
+            height: 48px;
+            a {
+                text-align: center;
+                position: relative;
+                display: block;
+                height: 100%;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                align-items: center;
+                text-decoration: none;
+                font: $font_base_poppins;
+                color: $color_grey;
+                font-size: $font_size_p;
+                font-weight: 400;
+                &:hover,
+                &:active {
+                    text-decoration: underline;
+                    text-decoration-color: $color_light_grey;
+                }
+            }
+        }
+    }
+}

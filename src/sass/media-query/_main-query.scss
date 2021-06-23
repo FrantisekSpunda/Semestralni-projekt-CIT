@@ -1,0 +1,107 @@
+@media (max-width: 1200px) {
+    #menu-static {
+        width: min-content !important;
+        justify-content: flex-end !important;
+        a {
+            display: none !important;
+        }
+        #menu-icon {
+            display: block;
+        }
+    }
+    .how-it-works-content {
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: 2fr 1fr !important;
+        grid-template-areas: 
+        'schema schema'
+        'description-1 description-2' !important;
+    }
+}
+
+@media (max-width: $width_lps) {
+    footer {
+        padding: {
+            left: 0 !important;
+            right: 0 !important;
+        };
+    }
+    .photographs {
+        zoom: 0.6;
+    }
+}
+
+@media (max-width: $width_lb) {
+    footer {
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: 2fr 2fr 1fr !important;
+        grid-template-areas: 
+        'contact programs'
+        'cont ...'
+        'logo logo' !important;
+        .contact, .programs, .content {
+            align-items: flex-start !important;
+        }
+    }
+    main .how-it-works .how-it-works-content .image-of-schema {
+        padding: 0 !important;
+        #schema-image {
+            max-width: 100% !important;
+        }
+    }
+    .container {
+        width: 90vw !important;
+    }
+    .inside-slider {
+        zoom: 0.8;
+    }
+    
+}
+
+@media (max-width: 650px) {
+    .inside-slider {
+        zoom: 0.6;
+        margin: {
+            left: 10px;
+            right: 10px;
+        };
+    }
+    footer {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: 2fr 2fr 2fr 1fr !important;
+        grid-template-areas: 
+        'contact'
+        'programs'
+        'cont'
+        'logo' !important;
+        div {
+            margin-bottom: 16px;
+        }
+        
+    }
+}
+
+
+@media (max-width: 650px) {
+    .container > *, 
+    .container > *, 
+    .container > * > *, 
+    .container > * > * > *, 
+    .container > * > * > * > * {
+        zoom: 0.9;
+    }
+}
+
+@media (max-width: $width_ml) {
+    .container > *, 
+    .container > *, 
+    .container > * > *, 
+    .container > * > * > *, 
+    .container > * > * > * > * {
+        zoom: 0.8;
+    }
+}
+@media (max-width: 823px) {
+    .photographs {
+        zoom: 0.4;
+    }
+}

@@ -1,0 +1,17 @@
+.photographs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 280px);
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    .photo {
+        // border: 1px solid $color_light_grey;
+        border-radius: 5px;
+        height: 400px;
+        img {
+            width: 100%;
+            // height: 100%;
+            border-radius: 5px;
+            
+        }
+    }
+}

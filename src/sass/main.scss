@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+// Extentions .sass
+@import './extension/variables';
+@import './extension/fonts';
+
+
+
+body {
+    font: $font_base_poppins;
+    color: $color_grey;
+    background: radial-gradient(circle, rgba(242,242,242,1) 60%, rgb(201, 201, 201) 100%);
+    .container {
+        width: 70vw;
+        margin: {
+            top: 32px;
+            bottom: 0;
+            left: auto;
+            right: auto;
+        }
+        font: $font_base_poppins;
+    }
+}
+
+// Media-query .sass
+@import './media-query/main-query';
+
+// Core .sass - index | header, footer
+@import './core/slider-index';
+@import './core/main-index';
+@import './core/for-download-index';
+@import './core/how-it-works';
+@import './core/navigation';
+
+@import './core/footer';
+@import './core/header';
+
+// Subpages
+
+@import './core/photographs';
+@import './core/letak';

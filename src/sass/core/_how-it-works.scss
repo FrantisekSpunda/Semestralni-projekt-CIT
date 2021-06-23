@@ -1,0 +1,68 @@
+main .how-it-works {
+    width: 100%;
+    height: min-content;
+
+    .how-it-works-content {
+        height: max-content;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 16px;
+        grid-template-areas: 
+        'schema description-1'
+        'schema description-2';
+        border-radius: 5px;
+        .image-of-schema {
+            padding: {
+                top: 40px;
+                bottom: 40px;
+            };
+            min-width: 400px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            grid-area: schema;
+            border: 1px solid $color_light_grey;
+            border-radius: 5px;
+            #schema-image {
+                max-width: 80%;
+            }
+        }
+        .description {
+            border: 1px solid $color_light_grey;
+            border-radius: 5px;
+            padding: {
+                top: 16px;
+                right: 32px;
+                left: 32px;
+                bottom: 16px;
+            }; 
+            h3 {
+                font: $font_base_poppins;
+                font-size: $font_size_h3;
+                text-transform: uppercase;
+                font-weight: 300;
+                text-align: center;
+            }
+            p {
+                font: $font_base_poppins;
+            }
+            ul {
+                font: $font_base_poppins;
+                li{
+                    font: $font_base_poppins;
+                    margin-left: 15px;
+                }
+            }
+        }
+        .description-1 {
+            grid-area: description-1;
+        }
+        .description-2 {
+            grid-area: description-2;
+        }
+
+    }
+}

@@ -1,0 +1,61 @@
+.index-slider {
+    display: none;
+    display: flex;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: $color_white;
+    overflow: hidden;
+    .inside-slider {
+        position: relative;
+        height: fit-content;
+        width: fit-content;
+        color: $color_grey;
+        font: $font_base_poppins;
+
+        @mixin slider-lines {
+            position: absolute;
+            width: calc(100vw);
+            height: 1px;
+            background: $color_grey;
+            left: 0;
+        }
+        
+        h1 {
+            position: relative;
+            font-weight: 200;
+            font-size: $font_size_h1;
+            left: 160%;
+        }
+        h2 {
+            position: relative;
+            font-size: $font_size_h2;
+            font-weight: 300;
+            opacity: 0;
+        }
+
+        .slider-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            .line:nth-child(1) {
+                @include slider-lines;
+                left: -100%;
+                transform: translateX(calc(-100% + 204px));
+            }
+            
+            .line:nth-child(2) {
+                @include slider-lines;
+                bottom: 42px;
+                left: 160%;
+            }
+        }
+    }
+}
